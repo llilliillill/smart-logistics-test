@@ -24,7 +24,12 @@ export function CreateBid({ trading, id }: CreateBidProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-3"
+      autoComplete="off"
+      noValidate
+    >
       <div className="flex flex-col gap-1">
         <div className="flex items-center justify-between text-xs text-muted-foreground">
           <label htmlFor="amount-input">

@@ -25,18 +25,9 @@ export function Trading({ trading, id }: TradingProps) {
           <div className="flex items-center justify-between">
             <span className="text-muted-foreground">Текущая цена:</span>
             <strong className="text-lg font-bold text-foreground">
-              {formatPrice(trading?.price?.current)}
+              {formatPrice(trading?.price?.start)}
             </strong>
           </div>
-
-          {!!trading?.price?.start && (
-            <div className="mt-1 flex justify-between border-t border-border/40 pt-1 text-muted-foreground">
-              <span>Стартовая цена:</span>
-              <span className="font-medium text-foreground">
-                {formatPrice(trading?.price?.start)}
-              </span>
-            </div>
-          )}
 
           {!!trading?.price?.current_no_vat && (
             <div className="mt-1 flex justify-between border-t border-border/40 pt-1 text-muted-foreground">

@@ -2,11 +2,9 @@ import { z } from "zod";
 
 export const placeBetSchema = () =>
   z.object({
-    amount: z
-      .number({
-        invalid_type_error: "Введите корректное число",
-      })
-      .positive("Сумма должна быть больше 0"),
+    amount: z.number({
+      message: "Некорректная ставка",
+    }),
   });
 
 export type PlaceBetFormValues = z.infer<ReturnType<typeof placeBetSchema>>;

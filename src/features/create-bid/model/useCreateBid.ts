@@ -24,7 +24,6 @@ export function useCreateBid(id: string) {
       queryClient.invalidateQueries({ queryKey: ["bets", id] });
       queryClient.invalidateQueries({ queryKey: ["auction", id] });
       queryClient.invalidateQueries({ queryKey: ["auctions"] });
-      reset();
     },
   });
 
